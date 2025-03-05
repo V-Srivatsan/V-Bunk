@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    min-width: 300px;
+    padding: 20px 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.field * { margin: 0 5px; }
+.field label { font-size: 16px; }
+.field input:not([type="submit"]) { 
+    padding: 2.5px;
+    border-radius: 7.5px;
+    max-width: 75px;
+}
+
+input[type="submit"] {
+    padding: 5px 10px;
+    border-radius: 7.5px;
+    background: rgb(22, 153, 216);
+    color: white;
+    border: none;
+}
+
+footer {
+    padding: 7.5px 5px;
+    text-align: center;
+    font-size: 10px;
+    background: #121212;
+    color: white;
+}
+
+footer a { color: white; }
+footer a:hover { color: #ddd; }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Bunk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Shall V-Bunk?</h1>
+        <p>Cringe I know 😅</p>
+
+        <details>
+            <summary style="text-align: center; font-size: 16px; margin: 15px 0; font-weight: bold;">Uhh... What?</summary>
+            <ol>
+                <li>Sign into VTOP</li>
+                <li>Head over to &quot;Class Attendance&quot;</li>
+                <li>Select the semester</li>
+                <li>Once the summary loads, you&apos;re good to go!</li>
+            </ol>
+        </details>
+
+        <form>
+            <div class="field">
+                <label for="until_date">Calculation Date</label>
+                <input type="date" name="until_date" id="until_date" required>
+            </div>
+            <div class="field">
+                <label for="delay">Delay (in ms)</label>
+                <input type="number" name="delay" id="delay" value="750" min="750" required>
+            </div>
+            <div class="field">
+                <input type="submit" value="Plan Bunk!">
+            </div>
+            <p style="font-size: 12px; color: #020202; text-align: center;">Don't be hasty with the delay<br />We both know it takes atleast a second to load... 🤫</p>
+        </form>
+        <p style="margin-top: 15px; font-size: 16px;" id="output"></p>
+    </main>
+    <footer>
+        Developed with laziness by <a href="https://srivatsan.vercel.app" target="_blank" rel="noopener noreferrer">V Srivatsan</a>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
