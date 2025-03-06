@@ -37,7 +37,7 @@ const calc_bunks = (date, thres, rows) => {
 
     const diff = calc_date_diff(curr, date)
     rows.forEach(row => {
-        if (row.children == 1) return;
+        if (row.children.length == 1) return;
 
         const type = row.children[3].innerText  
         const slots = row.children[4].innerText
