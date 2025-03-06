@@ -19,12 +19,13 @@ const calc_bunks = (date, thres, rows) => {
 
     date = new Date(date)
     const curr = (() => {
-        const res = new Date()
-        return new Date(
+        let res = new Date()
+        res = new Date(
             res.getFullYear() + "-" +
             (Math.floor((res.getMonth() + 1) / 10) == 0 ? "0" : "") + (res.getMonth() + 1) + "-" +
             (Math.floor(res.getDate() / 10) == 0 ? "0" : "") + res.getDate()
         )
+        return new Date(res.getTime() + DAYS_MS)
     })()
     if (date.getTime() <= curr.getTime()) return;
     
