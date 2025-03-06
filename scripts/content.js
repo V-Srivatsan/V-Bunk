@@ -71,6 +71,8 @@ const get_slot_days = (slot_str, isLab) => {
     )
 
     slots.forEach(slot => {
+        if (!isLab && SLOT_DAY[slot] == undefined) return;
+        
         if (isLab) {
             let lab_no = parseInt(slot)
             if (lab_no > 30) lab_no -= 30
