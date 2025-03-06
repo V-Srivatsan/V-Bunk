@@ -23,12 +23,20 @@
 
         <form>
             <div class="field">
-                <label for="until_date">Calculation Date</label>
-                <input type="date" name="until_date" id="until_date" required>
+                <label for="att_thres">Attendance Threshold</label>
+                <input type="number" name="att_thres" id="att_thres" value="75" min="75" max="100" required>
+            </div>
+            <div class="field">
+                <label for="att_date">Calculation Date</label>
+                <input type="date" name="att_date" id="att_date" required>
+            </div>
+            <hr />
+            <div class="field">
+                <label for="calc_od"><input type="checkbox" name="calc_od" id="calc_od"> Calculate OD</label>
             </div>
             <div class="field">
                 <label for="delay">Delay (in ms)</label>
-                <input type="number" name="delay" id="delay" value="750" min="750" required>
+                <input type="number" name="delay" id="delay" value="1000" min="1000" required>
             </div>
             <div class="field">
                 <input type="submit" value="Plan Bunk!">

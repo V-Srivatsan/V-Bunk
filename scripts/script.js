@@ -5,12 +5,16 @@ const plan_bunk = (event) => {
     const output = document.querySelector('#output')
     const form = event.target
 
+    const data = {}
+    form.querySelectorAll('input:not([type="submit"])').forEach(inp => {
+        data[inp.name] = (inp.type == 'checkbox' ? inp.checked : inp.value)
+    })
+
     output.innerText = "Processing..."
-    chrome.runtime.sendMessage({
-        date: form.querySelector('input#until_date').value,
-        delay: form.querySelector('input#delay').value
-    }, (res) => {
-        output.innerText = `ODs Used: ${res.od}/40`
+    chrome.runtime.sendMessage(data, (res) => {
+        if (res.error)
+            output.innerText = 'An error occurred! Maybe increase the delay?'
+        output.innerText = data['calc_od'] ? `ODs Used: ${res.od}/40` : ''
     })
 }
 

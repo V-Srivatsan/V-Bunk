@@ -22,17 +22,26 @@ main {
 .field * { margin: 0 5px; }
 .field label { font-size: 16px; }
 .field input:not([type="submit"]) { 
-    padding: 2.5px;
-    border-radius: 7.5px;
+    padding: 5px;
+    border-radius: 2.5px;
     max-width: 75px;
+    border: 1px solid black;
 }
 
 input[type="submit"] {
-    padding: 5px 10px;
-    border-radius: 7.5px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    outline: 2px solid rgb(22, 153, 216);
     background: rgb(22, 153, 216);
     color: white;
     border: none;
+}
+
+input[type="submit"]:hover {
+    background: transparent;
+    color: black;
 }
 
 footer {
