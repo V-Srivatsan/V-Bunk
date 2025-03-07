@@ -1,7 +1,7 @@
 {
     "name": "V-Bunk",
-    "description": "Attendance Calculator for VTOP",
-    "version": "1.0",
+    "description": "V-Bunk is an extension that helps you gain insight on your attendance. Specifically, the bunking part of it (hence the name). View your used ODs and also plan how many classes you can skip with the click of a button.",
+    "version": "1.1.0",
     "manifest_version": 3,
     "action": {
         "default_popup": "index.html"
@@ -12,7 +12,7 @@
         "48": "icon64.png",
         "128": "icon128.png"
     },
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["tabs", "activeTab", "scripting"],
     "content_scripts": [
         {
             "matches": ["https://*.vit.ac.in/vtop/content"],

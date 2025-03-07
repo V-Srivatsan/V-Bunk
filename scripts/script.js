@@ -14,7 +14,8 @@ const plan_bunk = (event) => {
     chrome.runtime.sendMessage(data, (res) => {
         if (res.error)
             output.innerText = 'An error occurred! Maybe increase the delay?'
-        output.innerText = data['calc_od'] ? `ODs Used: ${res.od}/40` : ''
+        else
+            output.innerText = data['calc_od'] ? `ODs Used: ${res.od}/40` : ''
     })
 }
 
